@@ -42,12 +42,13 @@
            filter: brightness(1.1);
        }
        .chart-text {
-           font-size: 12px;
-           fill: white;
+    font-size: 14px;
+    fill: white;
+    font-weight: 500;
        }
        .chart-percentage {
-           font-size: 11px;
-           fill: white;
+    font-size: 13px;
+    fill: white;
        }
        .benefits-card {
            background: #F8F9FF;
@@ -82,10 +83,11 @@
        .course-box {
            background: #f8f9fa;
            border-radius: 15px;
-           padding: 20px;
            margin: 10px;
            text-align: center;
-           min-width: 200px;
+              width: 100%;
+    min-width: 250px;
+    padding: 25px;
            transition: all 0.3s ease;
            cursor: pointer;
        }
@@ -154,7 +156,7 @@
            display: flex;
            justify-content: space-between;
            flex-wrap: wrap;
-           gap: 20px;
+           gap: 30px;
        }
        
        @media (max-width: 768px) {
@@ -188,30 +190,30 @@
        <div class="policy-section">
            <h2 class="section-title">평점 점수제 운영</h2>
            <div class="image-container">
-               <svg width="100%" height="400" viewBox="0 0 800 400">
-                   <g transform="translate(400, 200)">
-                       <!-- 출석 점수 섹션 -->
-                       <path class="chart-segment" d="M0,0 L0,-100 A100,100 0 0,1 86.6,50 Z" fill="#0015b5"/>
-                       <text class="chart-text" x="0" y="-50" text-anchor="middle">
-                           <tspan x="0" dy="0">출석 점수</tspan>
-                           <tspan x="0" dy="15" class="chart-percentage">30%</tspan>
-                       </text>
-                       
-                       <!-- 과제 제출 섹션 -->
-                       <path class="chart-segment" d="M0,0 L86.6,50 A100,100 0 0,1 -86.6,50 Z" fill="#4169E1"/>
-                       <text class="chart-text" x="50" y="30" text-anchor="middle">
-                           <tspan x="50" dy="0">과제 제출</tspan>
-                           <tspan x="50" dy="15" class="chart-percentage">35%</tspan>
-                       </text>
-                       
-                       <!-- 교강사 평가 섹션 -->
-                       <path class="chart-segment" d="M0,0 L-86.6,50 A100,100 0 0,1 0,-100 Z" fill="#6495ED"/>
-                       <text class="chart-text" x="-50" y="30" text-anchor="middle">
-                           <tspan x="-50" dy="0">교강사 평가</tspan>
-                           <tspan x="-50" dy="15" class="chart-percentage">35%</tspan>
-                       </text>
-                   </g>
-               </svg>
+          <svg width="100%" height="500" viewBox="0 0 800 500">
+    <g transform="translate(400, 250)">
+        <!-- 출석 점수 섹션 -->
+        <path class="chart-segment" d="M0,0 L0,-150 A150,150 0 0,1 129.9,75 Z" fill="#0015b5"/>
+        <text class="chart-text" x="0" y="-80" text-anchor="middle">
+            <tspan x="0" dy="0">출석 점수</tspan>
+            <tspan x="0" dy="20" class="chart-percentage">30%</tspan>
+        </text>
+        
+        <!-- 과제 제출 섹션 -->
+        <path class="chart-segment" d="M0,0 L129.9,75 A150,150 0 0,1 -129.9,75 Z" fill="#4169E1"/>
+        <text class="chart-text" x="75" y="45" text-anchor="middle">
+            <tspan x="75" dy="0">과제 제출</tspan>
+            <tspan x="75" dy="20" class="chart-percentage">35%</tspan>
+        </text>
+        
+        <!-- 교강사 평가 섹션 -->
+        <path class="chart-segment" d="M0,0 L-129.9,75 A150,150 0 0,1 0,-150 Z" fill="#6495ED"/>
+        <text class="chart-text" x="-75" y="45" text-anchor="middle">
+            <tspan x="-75" dy="0">교강사 평가</tspan>
+            <tspan x="-75" dy="20" class="chart-percentage">35%</tspan>
+        </text>
+    </g>
+</svg>
 
                <div style="display: flex; justify-content: space-between;">
                    <div class="benefits-card">
