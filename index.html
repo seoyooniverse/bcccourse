@@ -1,270 +1,206 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-   <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>학원 정책 안내</title>
-   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;500;600;700&display=swap" rel="stylesheet">
-   <style>
-       body {
-           margin: 0;
-           padding: 0;
-           font-family: 'IBM Plex Sans KR', Arial, sans-serif;
-       }
-       .policy-container {
-           max-width: 1200px;
-           margin: 0 auto;
-           padding: 20px;
-       }
-       .policy-section {
-           margin-bottom: 60px;
-       }
-       .section-title {
-           font-size: 24px;
-           font-weight: bold;
-           margin-bottom: 30px;
-           padding-bottom: 10px;
-           border-bottom: 2px solid #333;
-       }
-       .image-container {
-           width: 100%;
-           margin-bottom: 40px;
-           background: white;
-           border-radius: 10px;
-           box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-           padding: 20px;
-       }
-       .chart-segment {
-           transition: all 0.3s ease;
-       }
-       .chart-segment:hover {
-           transform: scale(1.05);
-           filter: brightness(1.1);
-       }
-       .chart-text {
-    font-size: 14px;
-    fill: white;
-    font-weight: 500;
-       }
-       .chart-percentage {
-    font-size: 13px;
-    fill: white;
-       }
-       .benefits-card {
-           background: #F8F9FF;
-           border-radius: 15px;
-           padding: 15px;
-           margin: 10px 0;
-           transition: all 0.3s ease;
-           cursor: pointer;
-           border: 1px solid #E8EFFF;
-       }
-       .benefits-card:hover {
-           transform: translateY(-5px);
-           box-shadow: 0 5px 15px rgba(0, 21, 181, 0.1);
-       }
-       .course-button {
-           width: 100%;
-           padding: 15px;
-           margin: 10px 0;
-           border: 2px solid #e0e0e0;
-           border-radius: 8px;
-           background: #f8f9fa;
-           cursor: pointer;
-           text-align: left;
-           transition: all 0.3s ease;
-           font-family: 'IBM Plex Sans KR', Arial, sans-serif;
-       }
-       .course-button.selected {
-           background: #0015b5;
-           color: white;
-           border-color: #0015b5;
-       }
-       .course-box {
-           background: #f8f9fa;
-           border-radius: 15px;
-           margin: 10px;
-           text-align: center;
-              width: 100%;
-    min-width: 250px;
-    padding: 25px;
-           transition: all 0.3s ease;
-           cursor: pointer;
-       }
-       .course-box:hover {
-           transform: translateY(-5px);
-           box-shadow: 0 5px 15px rgba(0, 21, 181, 0.2);
-       }
-       .course-name {
-           font-size: 18px;
-           font-weight: 600;
-           margin-bottom: 5px;
-       }
-       .course-description {
-           font-size: 14px;
-           opacity: 0.8;
-           font-weight: 400;
-       }
-       .course-tag {
-           display: inline-block;
-           padding: 4px 8px;
-           border-radius: 12px;
-           font-size: 12px;
-           margin-top: 5px;
-           font-weight: 500;
-       }
-       .tag-required {
-           background: #fee2e2;
-           color: #dc2626;
-       }
-       .tag-optional {
-           background: #dcfce7;
-           color: #16a34a;
-       }
-       .result-box {
-           background: #eceeff;
-           padding: 20px;
-           border-radius: 8px;
-           margin-top: 20px;
-       }
-       .total-price {
-           display: flex;
-           justify-content: space-between;
-           align-items: center;
-           margin-bottom: 10px;
-       }
-       .price-label {
-           font-size: 18px;
-           font-weight: 700;
-           color: #0015b5;
-       }
-       .price-amount {
-           font-size: 24px;
-           font-weight: 700;
-           color: #0015b5;
-       }
-       .savings-alert {
-           background: #f0fdf4;
-           color: #166534;
-           padding: 10px;
-           border-radius: 6px;
-           margin-top: 10px;
-           display: none;
-           font-weight: 500;
-       }
-       .courses-container {
-           display: flex;
-           justify-content: space-between;
-           flex-wrap: wrap;
-           gap: 30px;
-       }
-       
-       @media (max-width: 768px) {
-           .policy-container {
-               padding: 15px;
-           }
-           .section-title {
-               font-size: 20px;
-           }
-           .courses-container {
-               flex-direction: column;
-           }
-           .course-box {
-               margin: 5px 0;
-           }
-       }
-       
-       @media (max-width: 480px) {
-           .policy-container {
-               padding: 10px;
-           }
-           .section-title {
-               font-size: 18px;
-           }
-       }
-   </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>학원 정책 안내</title>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-dark: #1B1B3A;
+            --primary-gold: #B8945C;
+            --bg-light: #F6F6F6;
+            --text-light: #F6F6F6;
+            --navy-light: #2A2A5E;
+            --navy-lighter: #3F3F7D;
+        }
+        
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'IBM Plex Sans KR', sans-serif;
+            background-color: var(--bg-light);
+        }
+        .policy-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .policy-section {
+            margin-bottom: 60px;
+        }
+        .section-title {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 30px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--primary-gold);
+            color: var(--primary-dark);
+        }
+        .image-container {
+            width: 100%;
+            margin-bottom: 40px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(27, 27, 58, 0.1);
+            padding: 20px;
+        }
+        .benefits-card {
+            background: var(--primary-dark);
+            border-radius: 15px;
+            padding: 20px;
+            margin: 10px 0;
+            color: var(--text-light);
+            border: 1px solid var(--primary-gold);
+        }
+        .benefits-card h3 {
+            margin: 0;
+            font-size: 18px;
+            color: var(--primary-gold);
+        }
+        .benefits-card ul {
+            margin: 10px 0 0 0;
+            padding-left: 20px;
+            color: var(--text-light);
+        }
+        .course-box {
+            background: var(--primary-dark);
+            border-radius: 15px;
+            padding: 25px;
+            margin: 10px;
+            text-align: center;
+            min-width: 200px;
+            color: var(--text-light);
+            border: 1px solid var(--primary-gold);
+            transition: all 0.3s ease;
+        }
+        .course-box:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(184, 148, 92, 0.3);
+        }
+        .course-box h3 {
+            margin: 0 0 15px 0;
+            font-size: 18px;
+            color: var(--primary-gold);
+        }
+        .course-box p {
+            margin: 0;
+            font-size: 16px;
+            font-weight: bold;
+        }
+        .courses-container {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .discount-notice {
+            text-align: center;
+            margin-top: 25px;
+            color: var(--primary-gold);
+            font-weight: 500;
+            font-size: 18px;
+            padding: 15px;
+            border-top: 1px solid var(--primary-gold);
+        }
+        
+        @media (max-width: 768px) {
+            .policy-container {
+                padding: 15px;
+            }
+            .section-title {
+                font-size: 20px;
+            }
+            .courses-container {
+                flex-direction: column;
+            }
+            .course-box {
+                margin: 5px 0;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .policy-container {
+                padding: 10px;
+            }
+            .section-title {
+                font-size: 18px;
+            }
+        }
+    </style>
 </head>
 <body>
-   <div class="policy-container">
-       <!-- 평점 점수제 운영 섹션 -->
-       <div class="policy-section">
-           <h2 class="section-title">평점 점수제 운영</h2>
-           <div class="image-container">
-          <svg width="100%" height="500" viewBox="0 0 800 500">
-    <g transform="translate(400, 250)">
-        <!-- 출석 점수 섹션 -->
-        <path class="chart-segment" d="M0,0 L0,-150 A150,150 0 0,1 129.9,75 Z" fill="#0015b5"/>
-        <text class="chart-text" x="0" y="-80" text-anchor="middle">
-            <tspan x="0" dy="0">출석 점수</tspan>
-            <tspan x="0" dy="20" class="chart-percentage">30%</tspan>
-        </text>
-        
-        <!-- 과제 제출 섹션 -->
-        <path class="chart-segment" d="M0,0 L129.9,75 A150,150 0 0,1 -129.9,75 Z" fill="#4169E1"/>
-        <text class="chart-text" x="75" y="45" text-anchor="middle">
-            <tspan x="75" dy="0">과제 제출</tspan>
-            <tspan x="75" dy="20" class="chart-percentage">35%</tspan>
-        </text>
-        
-        <!-- 교강사 평가 섹션 -->
-        <path class="chart-segment" d="M0,0 L-129.9,75 A150,150 0 0,1 0,-150 Z" fill="#6495ED"/>
-        <text class="chart-text" x="-75" y="45" text-anchor="middle">
-            <tspan x="-75" dy="0">교강사 평가</tspan>
-            <tspan x="-75" dy="20" class="chart-percentage">35%</tspan>
-        </text>
-    </g>
-</svg>
+    <div class="policy-container">
+        <!-- 평점 점수제 운영 섹션 -->
+        <div class="policy-section">
+            <h2 class="section-title">평점 점수제 운영</h2>
+            <div class="image-container">
+                <svg width="100%" height="400" viewBox="0 0 800 400">
+                    <!-- 원형 차트 -->
+                    <path d="M400,200 L400,50 A150,150 0 0,1 530,275 Z" fill="#1B1B3A"/>
+                    <path d="M400,200 L530,275 A150,150 0 0,1 270,275 Z" fill="#2A2A5E"/>
+                    <path d="M400,200 L270,275 A150,150 0 0,1 400,50 Z" fill="#3F3F7D"/>
+                    
+                    <!-- 텍스트 -->
+                    <text x="400" y="130" text-anchor="middle" fill="#F6F6F6">출석 점수</text>
+                    <text x="400" y="150" text-anchor="middle" fill="#B8945C">30%</text>
+                    
+                    <text x="500" y="250" text-anchor="middle" fill="#F6F6F6">과제 제출 점수</text>
+                    <text x="500" y="270" text-anchor="middle" fill="#B8945C">35%</text>
+                    
+                    <text x="300" y="250" text-anchor="middle" fill="#F6F6F6">교강사 평가 점수</text>
+                    <text x="300" y="270" text-anchor="middle" fill="#B8945C">35%</text>
+                </svg>
+                
+                <!-- 혜택 설명 카드들 -->
+                <div class="benefits-card">
+                    <h3>상위 N명</h3>
+                    <ul>
+                        <li>수강료 50% 할인</li>
+                        <li>프리미엄 프로젝트 매칭</li>
+                    </ul>
+                </div>
+                
+                <div class="benefits-card">
+                    <h3>80점 이상</h3>
+                    <ul>
+                        <li>수강료 30% 할인</li>
+                        <li>실무 프로젝트 매칭</li>
+                    </ul>
+                </div>
+                
+                <div class="benefits-card">
+                    <h3>70점 이상</h3>
+                    <ul>
+                        <li>수강료 10% 할인</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
 
-               <div style="display: flex; justify-content: space-between;">
-                   <div class="benefits-card">
-                       <h3 style="color: #0015b5">상위 N명</h3>
-                       <ul style="color: #4169E1">
-                           <li>수강료 50% 할인</li>
-                           <li>프리미엄 프로젝트 매칭</li>
-                       </ul>
-                   </div>
-                   
-                   <div class="benefits-card">
-                       <h3 style="color: #0015b5">80점 이상</h3>
-                       <ul style="color: #4169E1">
-                           <li>수강료 30% 할인</li>
-                           <li>실무 프로젝트 매칭</li>
-                       </ul>
-                   </div>
-                   
-                   <div class="benefits-card">
-                       <h3 style="color: #0015b5">70점 이상</h3>
-                       <ul style="color: #4169E1">
-                           <li>수강료 10% 할인</li>
-                       </ul>
-                   </div>
-               </div>
-           </div>
-       </div>
-
-       <!-- 맞춤형 수강료 정책 섹션 -->
-       <div class="policy-section">
-           <h2 class="section-title">맞춤형 수강료 정책</h2>
-           <div class="image-container">
-               <div class="courses-container">
-                   <div class="course-box" style="background: #0015b5; color: white;">
-                       <h3>필수 기본 과목</h3>
-                       <p>월 40만원</p>
-                   </div>
-                   <div class="course-box" style="background: #4169E1; color: white;">
-                       <h3>포트폴리오 전문 과목</h3>
-                       <p>월 40만원</p>
-                   </div>
-                   <div class="course-box" style="background: #6495ED; color: white;">
-                       <h3>현장실습 융합 과목</h3>
-                       <p>월 40만원</p>
-                   </div>
-               </div>
-               <div style="text-align: center; margin-top: 20px; font-weight: bold; color: #0015b5;">
-                   2과목 이상 수강 시, 추가 과목 50% 할인
-               </div>
-           </div>
-       </div>
-   </div>
+        <!-- 맞춤형 수강료 정책 섹션 -->
+        <div class="policy-section">
+            <h2 class="section-title">맞춤형 수강료 정책</h2>
+            <div class="image-container">
+                <div class="courses-container">
+                    <div class="course-box">
+                        <h3>필수 기본 과목</h3>
+                        <p>월 40만원</p>
+                    </div>
+                    <div class="course-box">
+                        <h3>포트폴리오 전문 과목</h3>
+                        <p>월 40만원</p>
+                    </div>
+                    <div class="course-box">
+                        <h3>현장실습 융합 과목</h3>
+                        <p>월 40만원</p>
+                    </div>
+                </div>
+                <div class="discount-notice">
+                    2과목 이상 수강 시, 추가 과목 50% 할인
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
