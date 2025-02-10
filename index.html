@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>학원 정책 안내</title>
+    <style>
+        .policy-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            font-family: 'IBM Plex Sans KR', sans-serif;
+        }
+
+        .policy-section {
+            margin-bottom: 60px;
+        }
+
+        .section-title {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 30px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #333;
+        }
+
+        .image-container {
+            width: 100%;
+            margin-bottom: 40px;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            padding: 20px;
+        }
+
+        .responsive-image {
+            width: 100%;
+            height: auto;
+            max-width: 800px;
+            display: block;
+            margin: 0 auto;
+        }
+
+        /* 태블릿 화면 */
+        @media (max-width: 768px) {
+            .policy-container {
+                padding: 15px;
+            }
+
+            .section-title {
+                font-size: 20px;
+                margin-bottom: 20px;
+            }
+
+            .image-container {
+                padding: 15px;
+            }
+        }
+
+        /* 모바일 화면 */
+        @media (max-width: 480px) {
+            .policy-container {
+                padding: 10px;
+            }
+
+            .section-title {
+                font-size: 18px;
+                margin-bottom: 15px;
+            }
+
+            .image-container {
+                padding: 10px;
+                margin-bottom: 30px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="policy-container">
+        <!-- 평점 점수제 운영 섹션 -->
+        <div class="policy-section">
+            <h2 class="section-title">평점 점수제 운영</h2>
+            <div class="image-container">
+                <img src="평점점수제운영.png" alt="평점 점수제 운영 안내" class="responsive-image">
+            </div>
+        </div>
+
+        <!-- 맞춤형 수강료 정책 섹션 -->
+        <div class="policy-section">
+            <h2 class="section-title">맞춤형 수강료 정책</h2>
+            <div class="image-container">
+                <img src="맞춤형수강료정책.png" alt="맞춤형 수강료 정책 안내" class="responsive-image">
+            </div>
+        </div>
+    </div>
+</body>
+</html>
