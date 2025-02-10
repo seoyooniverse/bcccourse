@@ -7,12 +7,11 @@
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --primary: #454584;
-            --primary-light: #5656A5;
-            --accent: #C4A36E;
-            --bg-light: #FFFFFF;
-            --text-dark: #333333;
-            --card-bg: #FAFAFA;
+            --primary: #0015b5;        /* 메인 컬러 */
+            --primary-light: #1a2dbd;   /* 밝은 메인 컬러 */
+            --gray: #6B7280;           /* 소프트 그레이 */
+            --bg-light: #FFFFFF;       /* 배경색 */
+            --text-white: #FFFFFF;     /* 흰색 텍스트 */
         }
         
         body {
@@ -20,7 +19,6 @@
             padding: 0;
             font-family: 'IBM Plex Sans KR', sans-serif;
             background-color: var(--bg-light);
-            color: var(--text-dark);
         }
         .policy-container {
             max-width: 1200px;
@@ -35,63 +33,67 @@
             font-weight: bold;
             margin-bottom: 30px;
             padding-bottom: 10px;
-            border-bottom: 2px solid var(--accent);
+            border-bottom: 2px solid var(--primary);
             color: var(--primary);
         }
         .image-container {
             width: 100%;
             margin-bottom: 40px;
-            background: var(--card-bg);
+            background: var(--bg-light);
             border-radius: 10px;
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
             padding: 20px;
         }
         .benefits-card {
-            background: var(--card-bg);
+            background: var(--primary);
             border-radius: 15px;
             padding: 20px;
             margin: 10px 0;
-            border: 1px solid var(--accent);
+            color: var(--text-white);
             transition: all 0.3s ease;
         }
         .benefits-card:hover {
             transform: translateY(-2px);
-            box-shadow: 0 4px 15px rgba(196, 163, 110, 0.15);
+            box-shadow: 0 4px 15px rgba(0, 21, 181, 0.2);
         }
         .benefits-card h3 {
             margin: 0;
             font-size: 18px;
-            color: var(--primary);
+            color: var(--text-white);
+            font-weight: 700;
         }
         .benefits-card ul {
             margin: 10px 0 0 0;
             padding-left: 20px;
-            color: var(--text-dark);
+            color: var(--text-white);
         }
         .course-box {
-            background: var(--card-bg);
+            background: var(--primary);
             border-radius: 15px;
             padding: 25px;
             margin: 10px;
             text-align: center;
             min-width: 200px;
-            border: 1px solid var(--accent);
+            color: var(--text-white);
             transition: all 0.3s ease;
         }
         .course-box:hover {
             transform: translateY(-5px);
-            box-shadow: 0 5px 15px rgba(196, 163, 110, 0.2);
+            box-shadow: 0 5px 15px rgba(0, 21, 181, 0.2);
+            background: var(--primary-light);
         }
         .course-box h3 {
             margin: 0 0 15px 0;
             font-size: 18px;
-            color: var(--primary);
+            color: var(--text-white);
+            font-weight: 600;
         }
         .course-box p {
             margin: 0;
             font-size: 16px;
-            font-weight: bold;
-            color: var(--accent);
+            font-weight: 500;
+            color: var(--text-white);
+            opacity: 0.9;
         }
         .courses-container {
             display: flex;
@@ -102,11 +104,11 @@
         .discount-notice {
             text-align: center;
             margin-top: 25px;
-            color: var(--accent);
+            color: var(--primary);
             font-weight: 500;
             font-size: 18px;
             padding: 15px;
-            border-top: 1px solid var(--accent);
+            border-top: 1px solid var(--primary);
         }
         
         @media (max-width: 768px) {
@@ -142,9 +144,9 @@
             <div class="image-container">
                 <svg width="100%" height="400" viewBox="0 0 800 400">
                     <!-- 원형 차트 -->
-                    <path d="M400,200 L400,50 A150,150 0 0,1 530,275 Z" fill="#454584"/>
-                    <path d="M400,200 L530,275 A150,150 0 0,1 270,275 Z" fill="#5656A5"/>
-                    <path d="M400,200 L270,275 A150,150 0 0,1 400,50 Z" fill="#6868C6"/>
+                    <path d="M400,200 L400,50 A150,150 0 0,1 530,275 Z" fill="#0015b5"/>
+                    <path d="M400,200 L530,275 A150,150 0 0,1 270,275 Z" fill="#1a2dbd"/>
+                    <path d="M400,200 L270,275 A150,150 0 0,1 400,50 Z" fill="#3344c4"/>
                     
                     <!-- 텍스트 -->
                     <text x="400" y="130" text-anchor="middle" fill="white">출석 점수</text>
